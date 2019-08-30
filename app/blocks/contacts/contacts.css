@@ -6,6 +6,7 @@
     font-weight:600;
     line-height: 1.3rem;
 }
+.contacts__phone:hover,
 .contacts__phone{
     font-size:2rem;
     color:#fff;

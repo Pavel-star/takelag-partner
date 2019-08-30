@@ -6,3 +6,6 @@
 @import '/blocks/carousel-slider/carousel-slider.css';
 @import '/blocks/news-list/news-list.css';
 @import '/blocks/footer/footer.css';
+@import '/blocks/content/content.css';
+@import '/blocks/breadcrumb/breadcrumb.css';
+@import '/blocks/vertical-nav/vertical-nav.css';
