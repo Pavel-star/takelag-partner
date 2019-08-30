@@ -1,0 +1,15 @@
+.contacts{
+    color:#fff;
+}
+.contacts__item{
+    font-size:1rem;
+    font-weight:600;
+    line-height: 1.3rem;
+}
+.contacts__phone{
+    font-size:2rem;
+    color:#fff;
+}
+.contacts__icon{
+    font-size:1.7rem;
+}
