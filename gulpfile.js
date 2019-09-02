@@ -1,6 +1,7 @@
-var gulp = require('gulp')
-    browserSync = require('browser-sync')
-    concat = require('gulp-concat')
+var gulp = require('gulp'),
+    browserSync = require('browser-sync'),
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglifyjs'),  
     imagemin = require('gulp-imagemin');
 
     
@@ -9,7 +10,12 @@ var gulp = require('gulp')
                 .pipe( imagemin() )
                 .pipe( gulp.dest('./dist/images/') );
     });
-
+    gulp.task('scripts',function(){
+        return gulp.src('./app/blocks/**/*.js')
+        .pipe( concat('libs.min.js') )
+        .pipe( uglify() )
+        .pipe( gulp.dest('./app/js/')) ;
+    });
     gulp.task('browserSync', function() {
         browserSync.init({
             server: {
