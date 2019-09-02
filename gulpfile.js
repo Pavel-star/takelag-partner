@@ -1,7 +1,15 @@
 var gulp = require('gulp')
-    browserSync = require('browser-sync');
+    browserSync = require('browser-sync')
+    concat = require('gulp-concat')
+    imagemin = require('gulp-imagemin');
 
     
+    gulp.task('imageMin', function(){
+        return gulp.src('./app/images/*')
+                .pipe( imagemin() )
+                .pipe( gulp.dest('./dist/images/') );
+    });
+
     gulp.task('browserSync', function() {
         browserSync.init({
             server: {
